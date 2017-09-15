@@ -6,7 +6,7 @@
  * 9/13/2017
  */
 #include <iostream>
-#include <string.h>
+#include <cstring>
 
 using namespace std;
 
@@ -17,14 +17,16 @@ int main()
 	char str2[81];
 	cin.get(str, 81);
 	cin.get();
-	cout << str << endl;
-
+	int size = strlen(str);
 	for (int i = 0; i < 81; i++) {
 		if (str[i] != '/0') {
-			// str2[count] = str[i]
-			// count++;
+			str2[i] = str[size - 1];
+			size--;
 		}
 	}
+
+	cout << str << endl;
+	cout << str2 << endl;
 
 	// if the 2 string are not equal
 	// if (strcmp(str, str2) == 0) {
